@@ -12,6 +12,7 @@
                             <th class="px-6 py-3 text-left font-medium">User</th>
                             <th class="px-6 py-3 text-left font-medium">Product</th>
                             <th class="px-6 py-3 text-left font-medium">Quantity Purchased</th>
+                            <th class="px-6 py-3 text-left font-medium">Total Amount</th>
                             <th class="px-6 py-3 text-left font-medium">Date</th>
                         </tr>
                     </thead>
@@ -20,7 +21,8 @@
                             <tr>
                                 <td class="px-6 py-4">{{ $txn->user->name }}</td>
                                 <td class="px-6 py-4">{{ $txn->product->name }}</td>
-                                <td class="px-6 py-4">{{ dd($txn->quantity) }}</td>
+                                <td class="px-6 py-4">{{ $txn->quantity_purchased }}</td>
+                                <td class="px-6 py-4">{{ $txn->total_amount }}</td>
                                 <td class="px-6 py-4">{{ $txn->created_at->format('Y-m-d H:i') }}</td>
                             </tr>
                         @endforeach
